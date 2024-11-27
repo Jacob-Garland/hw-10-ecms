@@ -50,4 +50,4 @@ INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
 ('Nina', 'Magenta', 11, 15), -- Sales Associate
 ('Oscar', 'Teal', 11, 15), -- Sales Associate
 ('Paul', 'Pink', 11, 15), -- Sales Associate
-('Quinn', 'Silver', 11, 15), -- Sales Associate;
+('Quinn', 'Silver', 11, 15), -- Sales Associate
