@@ -1,0 +1,16 @@
+{
+  "name": "hw-10-ecms",
+  "version": "1.0.0",
+  "description": "Employee Content Management System",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Jacob Garland",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "inquirer": "^12.1.0",
+    "pg": "^8.13.1"
+  }
+}
