@@ -1,7 +1,7 @@
 import Pool from 'pg-pool';
 require ('dotenv').config();
 
-const pool = new Pool({
+export const connection = new Pool({
     host: process.env.DB_HOST,
     port: parseInt(process.env.DB_PORT || '5432'),
     user: process.env.DB_USER,
@@ -9,4 +9,12 @@ const pool = new Pool({
     database: process.env.DB_NAME,
 });
 
-export default pool;
+export const initDB = async () => {
+    try {
+        await connection.connect();
+        console.log('Connected to database successfully!');
+    } catch (err) {
+        console.error('Error connecting to database...', err);
+        throw err;
+    }
+};

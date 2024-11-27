@@ -4,7 +4,10 @@
   "description": "Employee Content Management System",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "install dependancies": "npm install dotenv inquirer pg chalk",
+    "build": "npm run build",
+    "start":
   },
   "author": "Jacob Garland",
   "license": "ISC",
