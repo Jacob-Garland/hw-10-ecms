@@ -26,7 +26,7 @@ video coming soon
 ## Credits
 
 Jacob Garland
-*Database seed generated in a ChatGPT 4 prompt
+*Database seed generated using ChatGPT
 *Big thanks to: Node.JS & Typescript
 
 ## License
