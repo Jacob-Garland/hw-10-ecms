@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-import { connection } from "../database/db";
+import { connection } from "../database/db.js";
 // add chalk to the menus for some color
 // add bonus functions to the main menu in seperate submenu 
 

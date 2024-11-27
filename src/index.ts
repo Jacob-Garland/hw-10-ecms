@@ -1,5 +1,5 @@
-import { initDB } from "./database/db";
-import { mainMenu } from "./application/prompts";
+import { initDB } from "./database/db.js";
+import { mainMenu } from "./application/prompts.js";
 
 const runApp = async () => {
     console.log('Starting Employee Management System...');
