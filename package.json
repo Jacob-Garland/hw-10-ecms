@@ -7,7 +7,7 @@
     "test": "test",
     "install dependancies": "npm install dotenv inquirer pg chalk",
     "build": "npm run build",
-    "start":
+    "start": "node index.js"
   },
   "author": "Jacob Garland",
   "license": "ISC",
