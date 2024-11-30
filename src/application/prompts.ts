@@ -13,7 +13,6 @@ export const mainMenu = async () => {
                 'View All Roles',
                 'View All Employees',
                 'View Employees by Manager',
-                'View Employees by Department',
                 'Add a Department',
                 'Add a Role',
                 'Add an Employee',
@@ -37,9 +36,6 @@ export const mainMenu = async () => {
             break;
         case 'View Employees by Manager':
             await viewEmployeesByManager();
-            break;
-        case 'View Employees by Department':
-            await viewEmployeesByDepartment();
             break;
         case 'Add a Department':
             await addDepartment();
@@ -83,20 +79,21 @@ const viewEmployeesByManager = async () => {
     const employees = await connection.query('SELECT * FROM employee WHERE manager_id IS NOT NULL');
     console.table(employees.rows);
 };
-const viewEmployeesByDepartment = async () => {
-    const employees = await connection.query('SELECT * FROM employee WHERE department_id IS NOT NULL');
-    console.table(employees.rows);
-};
 const addDepartment = async () => {
-    const { name } = await inquirer.prompt([
+    const { name, id } = await inquirer.prompt([
         {
             type: 'input',
             name: 'name',
             message: 'Enter the name of the department:'
+        },
+        {
+            type: 'number',
+            name: 'id',
+            message: 'Enter the ID of the department:'
         }
     ]);
 
-    await connection.query('INSERT INTO department (name) VALUES ($1)', [name]);
+    await connection.query('INSERT INTO department (name, id) VALUES ($1, $2)', [name, id]);
     console.log('Department added successfully.');
 };
 const addRole = async () => {
